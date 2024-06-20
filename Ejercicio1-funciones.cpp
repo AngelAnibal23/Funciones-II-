@@ -22,6 +22,18 @@ int main(){
 	
 	cout<<"Digite el radio del circulo: "; 
 	cin>>radio; 
+ 
+ 	if(radio==0){
+ 		cout<<endl<<"El radio ingresado no representa una circunferencia. "; 
+		
+		return 1; 	
+ 	}
+ 	else if(radio<0){
+ 		cout<<endl<<"El radio no puede tomar valores negativos. "; 
+		
+		return 2; 
+ 	}
+ 	
 	
 	area= AreaCirculo(radio);
 	
