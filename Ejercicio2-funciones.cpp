@@ -8,11 +8,10 @@ rand de la librería cstdlib para generar los números aleatorios.
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
 using namespace std; 
 
 int main(){
-	int maximo, cantidad, numero_aleatorio, i=1;  
+	int maximo, cantidad, numero_aleatorio;  
 	
 	srand(time(0)); 
 		
@@ -22,14 +21,13 @@ int main(){
 	cin>>maximo; 
 	 
 	
-	do{
+	for(int i=1; i<=cantidad; i++){
+	
 		numero_aleatorio= rand()%maximo;
 		
 		cout<<endl<<numero_aleatorio<<endl; 
 		
-		i=i+1; 
-		
-	}while(i<=cantidad); 
+	}
 	
 	
 	return 0; 
