@@ -10,18 +10,25 @@ actualizar las variables correspondientes.
 #include <cmath>
 using namespace std;
 
-void calcularRaices(int a, int b, int c, double &raiz1, double &raiz2) {
+void calcularRaices(int a, int b, int c, double &raiz1, double &raiz2, bool &solucionesReales) {
     int discriminante = b * b - 4 * a * c;
-
+    
+	if(discriminante<0){
+		solucionesReales= false; 
+	}
+	else{
+	 solucionesReales= true; 
     raiz1 = (-b + sqrt(discriminante)) / (2 * a);
     raiz2 = (-b - sqrt(discriminante)) / (2 * a);
     
+    }
 }
 
 int main() {
     int a, b, c;
     double raiz1, raiz2;
-    
+    bool solucionesReales;
+     
     cout << "Digite el valor de a: ";
     cin >> a;
     cout << "Digite el valor de b: ";
@@ -34,10 +41,14 @@ int main() {
         return 1;
     }
 
-    calcularRaices(a, b, c, raiz1, raiz2);
-
-	cout << endl << "Las raices de la ecuación cuadratica son: X1 = " << raiz1 << "  X2 = " << raiz2 << endl;
+    calcularRaices(a, b, c, raiz1, raiz2, solucionesReales);
     
+    if(solucionesReales){
+        cout<< endl << "Las raices de la ecuación cuadratica son: X1 = " << raiz1 << "  X2 = " << raiz2 << endl;
+    }
+    else{
+    	cout<< endl << "Tiene raices complejas no reales. "; 
+    }
 
     return 0;
 }
