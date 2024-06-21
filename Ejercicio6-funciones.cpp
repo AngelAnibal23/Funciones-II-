@@ -21,6 +21,8 @@ int main(){
 	cout<<"Seleccione su accion: 1)Piedra, 2)Papel, 3)Tijeras: "; 
 	cin>>opcion; 
 	
+	cout<<endl<<"La computadora Eligio: "<<computadora<<endl; 
+	
 	if(opcion == 1 && computadora == 2){
 		cout<<endl<<"¡GANASTE!"; 
 	}
