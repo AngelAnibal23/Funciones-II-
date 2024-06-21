@@ -27,6 +27,12 @@ int main(){
 	cout<<"Digite el valor de c: "; 
 	cin>>c; 
 	
+	if(a==0){
+		cout<<endl<<"Los datos ingresados no representan una ecuacion cuadratica. ";
+		
+		return 1;  
+	}
+	
 	raiz1= (-b+discriminante(a,b,c))/(2*a);
 	raiz2= (-b-discriminante(a,b,c))/(2*a); 
 	
