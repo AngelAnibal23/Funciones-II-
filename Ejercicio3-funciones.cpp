@@ -14,10 +14,18 @@ float hipotenusafuncion(int x, int y){
 int main(){
     int lado1, lado2, hipotenusa;
     
+    
     cout<<"Digite el valor de un cateto: ";
     cin>>lado1;
     cout<<"Digiite el valor del otro cateto: ";
     cin>>lado2;
+    
+    if(lado1<1 || lado2<1 ){
+    	cout<<endl<<"Los valores ingresados no son validos: "; 
+    	
+    	return 1; 
+    }
+    
     
     hipotenusa= hipotenusafuncion(lado1,lado2);
     
